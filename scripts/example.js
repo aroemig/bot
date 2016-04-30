@@ -13,10 +13,10 @@ module.exports = function(robot) {
 		response.send("Brothers don't shake hands, brothers gotta hug!'")
 	})
 
-	robot.hear(/i like (.+)/i, function(response) {
-		var like = response.match[1]
+	robot.hear(/i want (.+)/i, function(response) {
+		var want = response.match[1]
 		// response.reply() will have the robot at-mention you when it responds
-		response.reply('I also like ' + like)
+		response.reply('I also want ' + want)
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
