@@ -13,6 +13,10 @@ module.exports = function(robot) {
 		response.send("Brothers don't shake hands, brothers gotta hug!'")
 	})
 
+	robot.hear(/Richard/i, function(response) {
+		response.send("I can actually hear you getting fatter'")
+	})
+
 	robot.hear(/i want (.+)/i, function(response) {
 		var want = response.match[1]
 		// response.reply() will have the robot at-mention you when it responds
@@ -21,8 +25,12 @@ module.exports = function(robot) {
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
 	robot.respond(/who should i call on today\?/i, function(response) {
-		var user = robot.brain.userForName('gordo')
+		var user = robot.brain.userForName('aroemig')
 		response.reply('Call on ' + user.real_name + '!')
 	})
+
+
+
+
 
 }
