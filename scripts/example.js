@@ -6,7 +6,8 @@ module.exports = function(robot) {
 	})
 
 	robot.hear(/Tommy/i, function(response) {
-		response.send("Tommy likey, Tommy want wingy!")
+		response.send("Tommy likey, Tommy want wingy!" + 
+https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiWv4Tztr_MAhUFSCYKHeBkDzsQjRwIBw&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F158822324332430616%2F&bvm=bv.121099550,d.dmo&psig=AFQjCNFaBQ64e5rP_lU2GDc07LOqzVk8aw&ust=1462417201681707)
 	})
 
 	robot.hear(/Brothers/i, function(response) {
