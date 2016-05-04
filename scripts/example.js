@@ -24,9 +24,9 @@ module.exports = function(robot) {
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
-	robot.respond(/who should i call on today\?/i, function(response) {
+	robot.respond(/Who loves their slackbot\?/i, function(response) {
 		var user = robot.brain.userForName('aroemig')
-		response.reply('Call on ' + user.real_name + '!')
+		response.reply( user.real_name + 'loves his slackbot ' + '!')
 	})
 
 }
