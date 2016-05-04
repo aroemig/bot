@@ -29,16 +29,5 @@ module.exports = function(robot) {
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
 
-if 
-	robot.hear(/Saturday/i, function(response) {
-		response.send("PARTY!")
-		}) { 
-} else if robot.hear(/Sunday/i, function(response) {
-		response.send("SundayFunDay")
-}) else 
-	robot.hear(/Monday, Tuesday, Wednesday, Thursday/i, function(response) { 
-			response.send("FML")
-})
-
 
 }
