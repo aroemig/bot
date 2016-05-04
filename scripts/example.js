@@ -32,5 +32,11 @@ module.exports = function(robot) {
 
 
 
+	robot.hear(/i want (.+)/i, function(response) {
+		var want = response.match[1]
+		// response.reply() will have the robot at-mention you when it responds
+		response.reply('I also want ' + want)
+	})
+
 
 }
