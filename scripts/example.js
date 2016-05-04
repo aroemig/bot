@@ -32,9 +32,9 @@ module.exports = function(robot) {
 var temperature = 80
 
 if (temperature > 50) {
-    robot.respond("It's not too bad out")
+    response.send("It's not too bad out")
 } else if (temperature > 70) {
-    console.log("It's hot out!")
+    response.send("It's hot out!")
 }
 
 
