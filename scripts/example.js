@@ -14,8 +14,19 @@ module.exports = function(robot) {
 	})
 
 	robot.hear(/Richard/i, function(response) {
-		response.send("I can actually hear you getting fatter'")
+		response.send("I can actually hear you getting fatter")
 	})
+
+	if 
+	robot.hear(/Good Morning/i, function(response) {
+		response.send("Have a great day at work!")
+	})
+	else if 
+	robot.hear(/Good Night/i, function(response) {
+		response.send("Don't let the bed bugs bite")
+	})
+
+
 
 	robot.hear(/i want (.+)/i, function(response) {
 		var want = response.match[1]
@@ -30,3 +41,4 @@ module.exports = function(robot) {
 	})
 
 }
+
