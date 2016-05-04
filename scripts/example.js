@@ -6,8 +6,7 @@ module.exports = function(robot) {
 	})
 
 	robot.hear(/Tommy/i, function(response) {
-		response.send("Tommy likey, Tommy want wingy!" + 
-https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiWv4Tztr_MAhUFSCYKHeBkDzsQjRwIBw&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F158822324332430616%2F&bvm=bv.121099550,d.dmo&psig=AFQjCNFaBQ64e5rP_lU2GDc07LOqzVk8aw&ust=1462417201681707)
+		response.send("Tommy likey, Tommy want wingy!")
 	})
 
 	robot.hear(/Brothers/i, function(response) {
@@ -29,6 +28,21 @@ https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8
 		var user = robot.brain.userForName('aroemig')
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
+
+	robot.hear(/(\+\+|\-\-|—)/i, function(response) {
+		var message = response.message.text || '';
+
+		var match;
+
+		if (match = message.match(/(:\S+?:)\x20*(\+\+|\-\-|—)/i)) { // Emoji
+			handleKarmaRequest(match[1], match[2], response);
+		} else if (match = message.match(/(@\S+?):?\x20*(\+\+|\-\-|—)/i)) { // @Mentions
+			handleKarmaRequest(match[1], match[2], response);
+		} else if (match = message.match(/(\S+)\x20*(\+\+|\-\-|—)/i)) { // Everything else
+			handleKarmaRequest(match[1], match[2], response);
+		}
+	});
+
 
 
 }
