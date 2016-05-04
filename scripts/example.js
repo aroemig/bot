@@ -23,16 +23,9 @@ module.exports = function(robot) {
 		response.reply('I also want ' + want)
 	})
 
-
-	//conditional 
-	if 
-		robot.hear(/Who loves their slackbot\?/i, function(response) {
-		var user = robot.brain.userForName('aroemig')		
-		response.reply( user.real_name + ' loves his slackbot' + '!')
-	})
-	else if 
-		robot.respond(/Who lvoes their slackbot\?/i, function(response) {
-		var userB = robot.brain.userForName('gordo')		
+	// robot.respond() means the robot will only reply when at-mentioned or DMed
+	robot.respond(/Who loves their slackbot\?/i, function(response) {
+		var user = robot.brain.userForName('aroemig')
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
 }
