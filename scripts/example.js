@@ -29,7 +29,7 @@ module.exports = function(robot) {
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
 
-	robot.hear(/What should i be doing today/i, function(response) {
+	robot.hear(/What should I do today\?/i, function(response) {
 		var d = new Date();
 		var weekday = new Array(7);
 		weekday[0]=  "Sunday";
@@ -47,7 +47,7 @@ module.exports = function(robot) {
 		} else if (day === 'Sunday') {
   		  response.send("SundayFunDay")
 		} else {
-    	response.send("working for a livin")
+    	response.send("Get to work!")
 		}
 
 				
