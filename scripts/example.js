@@ -29,20 +29,13 @@ module.exports = function(robot) {
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
 
-	robot.hear(/(\+\+|\-\-|—)/i, function(response) {
-		var message = response.message.text || '';
+var temperature = 80
 
-		var match;
-
-		if (match = message.match(/(:\S+?:)\x20*(\+\+|\-\-|—)/i)) { // Emoji
-			handleKarmaRequest(match[1], match[2], response);
-		} else if (match = message.match(/(@\S+?):?\x20*(\+\+|\-\-|—)/i)) { // @Mentions
-			handleKarmaRequest(match[1], match[2], response);
-		} else if (match = message.match(/(\S+)\x20*(\+\+|\-\-|—)/i)) { // Everything else
-			handleKarmaRequest(match[1], match[2], response);
-		}
-	});
-
+if (temperature > 50) {
+    robot.respond("It's not too bad out")
+} else if (temperature > 70) {
+    console.log("It's hot out!")
+}
 
 
 }
