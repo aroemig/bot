@@ -2,7 +2,7 @@ module.exports = function(robot) {
 
 	// robot.hear() will have the robot listen in on any channel it's in
 	robot.hear(/Aloha/i, function(response) {
-		response.send("https://static.pexels.com/photos/1029/landscape-mountains-nature-clouds.jpg")
+		response.send("Aloha\nhttps://c2.staticflickr.com/6/5245/5383640212_7a7ed84e27_b.jpg")
 	})
 
 	robot.hear(/Tommy/i, function(response) {
