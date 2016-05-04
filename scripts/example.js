@@ -29,29 +29,29 @@ module.exports = function(robot) {
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
 
+	robot.hear(/What should i be doing today/i, function(response) {
+		var d = new Date();
+		var weekday = new Array(7);
+		weekday[0]=  "Sunday";
+		weekday[1] = "Monday";
+		weekday[2] = "Tuesday";
+		weekday[3] = "Wednesday";
+		weekday[4] = "Thursday";
+		weekday[5] = "Friday";
+		weekday[6] = "Saturday";
 
-var d = new Date();
-var weekday = new Array(7);
-weekday[0]=  "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
+		var day = weekday[d.getDay()];
 
-var n = weekday[d.getDay()];
+		if (day === 'Saturday') {
+  		  response.send("PARTY!")
+		} else if (day === 'Sunday') {
+  		  response.send("SundayFunDay")
+		} else {
+    	response.send("working for a livin")
+		}
 
-if 
-	robot.hear(/Saturday/i, function(response) {
-		response.send("PARTY!")
-		}) { 
-} else if robot.hear(/Sunday/i, function(response) {
-		response.send("SundayFunDay")
-}) else 
-	robot.hear(/Monday, Tuesday, Wednesday, Thursday/i, function(response) { 
-			response.send("FML")
-})
+				
+	})
 
 
 }
