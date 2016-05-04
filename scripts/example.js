@@ -31,3 +31,10 @@ module.exports = function(robot) {
 
 }
 
+if (day === 'Saturday') {
+    console.log("PARTY")
+} else if (day === 'Sunday') {
+    console.log("Sunday Funday")
+} else {
+    console.log("FML")
+}
