@@ -17,17 +17,6 @@ module.exports = function(robot) {
 		response.send("I can actually hear you getting fatter")
 	})
 
-	if 
-	robot.hear(/Good Morning/i, function(response) {
-		response.send("Have a great day at work!")
-	})
-	else if 
-	robot.hear(/Good Night/i, function(response) {
-		response.send("Don't let the bed bugs bite")
-	})
-
-
-
 	robot.hear(/i want (.+)/i, function(response) {
 		var want = response.match[1]
 		// response.reply() will have the robot at-mention you when it responds
