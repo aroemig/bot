@@ -2,7 +2,7 @@ module.exports = function(robot) {
 
 	// robot.hear() will have the robot listen in on any channel it's in
 	robot.hear(/Aloha/i, function(response) {
-		response.send("Aloha")
+		response.send("https://static.pexels.com/photos/1029/landscape-mountains-nature-clouds.jpg")
 	})
 
 	robot.hear(/Tommy/i, function(response) {
@@ -28,4 +28,7 @@ module.exports = function(robot) {
 		var user = robot.brain.userForName('aroemig')
 		response.reply( user.real_name + ' loves his slackbot' + '!')
 	})
+
+
+
 }
